@@ -1,11 +1,11 @@
 import { Link } from "react-router";
-import { AlertCircle, MapPin, Users, Zap, ArrowRight } from "lucide-react";
+import { AlertCircle, MapPin, Zap, ArrowRight, LayoutDashboard } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import Marquee from "react-fast-marquee";
-import { FailureCases } from "./FailureCases";
-import { TimeLossText } from "./TimeLossText";
-import { MagneticText } from "./ui/morphing-cursor";
+import { FailureCases } from "./FailureCases.js";
+import { TimeLossText } from "./TimeLossText.js";
+import { MagneticText } from "./ui/morphing-cursor.js";
 
 
 export function Landing() {
@@ -42,7 +42,7 @@ export function Landing() {
               Geo-targeted missing person alerts reaching thousands of civilians instantly
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col lg:flex-row gap-4 justify-center items-center">
               <Link 
                 to="/report" 
                 className="group bg-[#DFE104] text-black px-8 py-4 h-14 flex items-center gap-3 hover:scale-105 active:scale-95 transition-all duration-300"
@@ -52,11 +52,11 @@ export function Landing() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </Link>
               <Link 
-                to="/alert/demo" 
-                className="border-2 border-[#3F3F46] bg-transparent text-foreground px-8 py-4 h-14 flex items-center gap-3 hover:bg-foreground hover:text-background transition-all duration-300"
+                to="/dashboard" 
+                className="group border-2 border-[#DFE104] bg-transparent text-[#DFE104] px-8 py-4 h-14 flex items-center gap-3 hover:bg-[#DFE104] hover:text-black transition-all duration-300"
               >
-                <Users className="w-5 h-5" />
-                JOIN NETWORK
+                <LayoutDashboard className="w-5 h-5" />
+                AUTHORITY DASHBOARD
               </Link>
             </div>
           </motion.div>
